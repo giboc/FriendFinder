@@ -25,7 +25,9 @@ router.post("/submit", (req, res) => {
         if(err)
             return console.log(err); 
     });
-    res.send();
+    res.sendFile(path.join(__dirname, "../data/friends.js"));
 });
+
+
 
 module.exports = router; 
