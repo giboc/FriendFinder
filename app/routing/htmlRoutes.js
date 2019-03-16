@@ -21,14 +21,9 @@ router.post("/submit", (req, res) => {
     for(let i = 1; i < 11; i++)
         entry.scores.push(req.body[i]);
     
-    console.log(entry);
-
-    entry = JSON.stringify(entry,null,2); 
-    
-    fs.appendFile(path.join(__dirname, "../data/friends.js"),entry, (err) => {
+    fs.appendFile(path.join(__dirname, "../data/friends.js"),JSON.stringify(entry,null,2), (err) => {
         if(err)
             return console.log(err); 
-
     });
     res.send();
 });
