@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1 class="font-weight-bold">Friend finder!</h1>
+        </div>
+
+        <form action="/submit" method="POST">
+            <div class="form-group row">
+                <label for="username" class="col-sm-1 col-form-label">Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="username" placeholder="enter your name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="userpic" class="col-sm-1 col-form-label">Profile image:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="userpic" placeholder="enter a link to your picture">
+                    </div>
+                </div>
+            <p><b>Answer the following questions with how much you agree. If you strongly agree, enter a 5. If you strongly disagree, enter a 1.</b></p>
+            
+            <p>
+                A chainsaw can solve any problem found in life.<br>
+                <input type="radio" name="1" value=1>1
+                <input type="radio" name="1" value=2>2
+                <input type="radio" name="1" value=3>3
+                <input type="radio" name="1" value=4>4
+                <input type="radio" name="1" value=5>5
+                
+            </p>
+            <p>
+                I like to go outside and analyze the specific daily patterns of certain people.<br>
+                <input type="radio" name="2" value=1>1
+                <input type="radio" name="2" value=2>2
+                <input type="radio" name="2" value=3>3
+                <input type="radio" name="2" value=4>4
+                <input type="radio" name="2" value=5>5
+            </p>
+            <p>
+                Poking at an animal's corpse for hours is perfectly normal.<br>
+                <input type="radio" name="3" value=1>1
+                <input type="radio" name="3" value=2>2
+                <input type="radio" name="3" value=3>3
+                <input type="radio" name="3" value=4>4
+                <input type="radio" name="3" value=5>5
+            </p>
+            <p>There is no such thing as a refridgerator that is too large.<br>
+                <input type="radio" name="4" value=1>1
+                <input type="radio" name="4" value=2>2
+                <input type="radio" name="4" value=3>3
+                <input type="radio" name="4" value=4>4
+                <input type="radio" name="4" value=5>5
+            </p>
+            <p>
+                Bloody clown suits are normal even outside of Halloween.<br>
+                <input type="radio" name="5" value=1>1
+                <input type="radio" name="5" value=2>2
+                <input type="radio" name="5" value=3>3
+                <input type="radio" name="5" value=4>4
+                <input type="radio" name="5" value=5>5
+            </p>
+            <p>
+                It's ok to kill your friends if they look at you the wrong way.<br>
+                <input type="radio" name="6" value=1>1
+                <input type="radio" name="6" value=2>2
+                <input type="radio" name="6" value=3>3
+                <input type="radio" name="6" value=4>4
+                <input type="radio" name="6" value=5>5
+            </p>
+            <p>
+                Masks made of flesh are very comfortable.<br>
+                <input type="radio" name="7" value=1>1
+                <input type="radio" name="7" value=2>2
+                <input type="radio" name="7" value=3>3
+                <input type="radio" name="7" value=4>4
+                <input type="radio" name="7" value=5>5
+            </p>
+            <p>
+                It's important to have a massive labyrinth in your basement.<br>
+                <input type="radio" name="8" value=1>1
+                <input type="radio" name="8" value=2>2
+                <input type="radio" name="8" value=3>3
+                <input type="radio" name="8" value=4>4
+                <input type="radio" name="8" value=5>5
+            </p>
+            <p>
+                Creating a collage from newspaper/magazine text is a great way to pass time!<br>
+                <input type="radio" name="9" value=1>1
+                <input type="radio" name="9" value=2>2
+                <input type="radio" name="9" value=3>3
+                <input type="radio" name="9" value=4>4
+                <input type="radio" name="9" value=5>5
+            </p>
+            <p>
+                I think Huey Lewis and the News'undisputed masterpiece is "Hip to be Square", a song so catchy, most
+                people
+                probably don't listen to the lyrics.<br>
+                <input type="radio" name="10" value=1>1
+                <input type="radio" name="10" value=2>2
+                <input type="radio" name="10" value=3>3
+                <input type="radio" name="10" value=4>4
+                <input type="radio" name="10" value=5>5
+            </p>
+
+            <button class="btn btn-primary" type="submit">Submit!</button>
+        </form>
+    </div>
+</body>
+
+</html>
