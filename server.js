@@ -16,4 +16,4 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use("/",htmlRoutes);
 
 
-app.listen(process.env.port || PORT);
+app.listen(process.env.PORT||PORT);
