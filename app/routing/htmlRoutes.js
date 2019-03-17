@@ -16,16 +16,51 @@ router.post("/submit", (req, res) => {
     let entry = {
         "name": req.body.username,
         "photo": req.body.userpic,
-        "scores" : []
+        "scores": []
     };
-    for(let i = 1; i < 11; i++)
+    for (let i = 1; i < 11; i++)
         entry.scores.push(req.body[i]);
+
+    fs.readFile(path.join(__dirname, "../data/friends.js"), (err, data) => {
+        var json = JSON.parse(data);
+        let match = {
+            data: "",
+            score: 999
+        }
+        
+        json.forEach( (friend) => {
+            let temp = 0;
+            for(let i = 1; i < 11; i++){
+                if(friend.scores[i] != entry.scores[i])
+                    if(friend.scores[i] > entry.scores[i])
+                        temp += (friend.scores[i] - entry.scores[i])
+                    else
+                        temp += (entry.scores[i] - friend.scores[i])
+                else
+                    temp+=0;
+
+            }
+            if(temp < match.score){
+                match.score = temp;
+                match.data = friend;
+                
+            }
+                
+        });
+
+        
+
+        json.push(entry)
+        res.send(match);
+        fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(json,null,2), (err) => {
+            if(err)
+                console.log(err);
+        });
+    })
+
+
     
-    fs.appendFile(path.join(__dirname, "../data/friends.js"),JSON.stringify(entry,null,2), (err) => {
-        if(err)
-            return console.log(err); 
-    });
-    res.sendFile(path.join(__dirname, "../data/friends.js"));
+    
 });
 
 
